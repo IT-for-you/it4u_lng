@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="translator.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #button1 {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        #button2 {
+            background-color: #008CBA;
+            color: white;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<h1 it4u_lng="title"></h1>
+<p it4u_lng="sentences.sentence1"></p>
+<p it4u_lng="sentences.sentence2"></p>
+<p it4u_lng="sentences.sentence3"></p>
+<button id="button1" onclick="loadTranslations('de')" it4u_lng="german"></button>
+<button id="button2" onclick="loadTranslations('en')" it4u_lng="english"></button>
+<p it4u_lng="footer:copyright"></p>
+<script>
+    loadTranslations();
+</script>
+</body>
+</html>
