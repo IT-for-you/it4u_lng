@@ -112,11 +112,12 @@ function addToTranslations(path) {
     if (translation) {
         let file = (path.split('/').pop().split('.').shift()).toString();
 
+        // If the translations object is not yet populated, initiate it
+        if (!it4u_lng.translations[it4u_lng.language]) {
+            it4u_lng.translations[it4u_lng.language] = {};
+        }
+        
         if (DEFAULT_FILE.includes(file)) {
-            // If the translations object is not yet populated, initiate it
-            if (!it4u_lng.translations[it4u_lng.language]) {
-                it4u_lng.translations[it4u_lng.language] = {};
-            }
             it4u_lng.translations[it4u_lng.language] = Object.assign(it4u_lng.translations[it4u_lng.language], translation);
         } else {
             it4u_lng.translations[it4u_lng.language][file] = translation;
